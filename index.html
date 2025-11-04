@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+  <link rel="icon" type="image" href="imgs/pplane1.png">
+  <title>HackNewHaven</title>
+  <link rel="stylesheet" href="css/home.css">
+
+  <style>
+    :root{
+      --bar-height: 10px;
+      --bar-padding: 8px;
+      --bar-bg: rgba(0,0,0,0.08);
+      --progress-bg: linear-gradient(90deg,#5eead4,#06b6d4);
+      --track-radius: 999px;
+      --img-size: 36px; /* size of the plane image */
+      --max-width: 1400px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: "Atkinson Hyperlegible Mono", sans-serif;
+      background: #ffffff;
+      color: #111827;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="https://mlh.io/seasons/2026/events" target="_blank"><img class="mlh-trust-badge" src="imgs/mlh-trust-badge-2026-white.png" alt=""></a>
+
+  <div class="top-progress-wrapper" aria-hidden="false">
+    <div class="progress-track" id="progressTrack" role="progressbar"
+        aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Page scroll progress">
+      <div class="progress-fill" id="progressFill"></div>
+
+      <div class="progress-plane" id="progressPlane" aria-hidden="true">
+        <img src="imgs/progressplane.png"alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-bg" style="background-image: url('imgs/bg1.png');">
+    <div class="navbar">
+      <a href="#info-title"><button>About</button></a>
+      <a href="#sponsors-title"><button>Sponsors</button></a>
+      <a href="#schedule"><button>Schedule</button></a>
+      <button>FAQ</button>
+      <button>Register</button>
+    </div>
+
+    <div class="title-div">
+      <div class="paper-plane-div">
+        <img class="paper-plane1" src="imgs/pplane1.png" alt="">
+      </div>
+
+      <div class="title">
+        <img src="imgs/Hack_New_Haven_Outlined.png" alt="">
+        <h1>Hack New Haven</h1>
+        <h2>Flying beyond the horizon.</h2>
+        <h3>28 - 29 March 2026 <br>University of New Haven, West Haven, CT, United States</h3>
+      </div>
+
+      <div class="paper-plane-div">
+        <img class="paper-plane2" src="imgs/pplane2.png" alt="">
+      </div>
+    </div>
+    
+    <div class="time-left-div">
+      <div class="countdown">
+        <div>
+          <span id="days">0</span>
+          <span class="label">Days</span>
+        </div>
+        <div>
+          <span id="hours">0</span>
+          <span class="label">Hours</span>
+        </div>
+        <div>
+          <span id="minutes">0</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div>
+          <span id="seconds">0</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cloud-div">
+      <img class="cloud1-img" src="imgs/cloud1.png" alt="">
+      <img class="cloud2-img" src="imgs/cloud2.png" alt="">
+    </div>
+  </div>
+
+  <div class="border-div">
+    <img src="imgs/plane3.png" alt="">
+    <p>
+      Welcome to Hack New Haven at the University of New Haven! This is the premier hackathon 
+      for the region. Join us for a weekend of innovation and collaboration as we explore 
+      the theme of reaching for new heights in technology and beyond.
+    </p>
+  </div>
+
+  <div class="navbar-bg2" style="background-image: url('imgs/bg2.png'); background-size: cover; background-position: center;">
+    <div class="section-title">
+      <img id="info-title" src="imgs/plane-icon4.png" alt="" style="pointer-events: none;">
+      <h1>Information</h1>
+    </div>
+
+    <div class="info-div">
+      <div class="info-card-section">
+        <div class="info-card-div">
+
+          <div class="info-card">
+            <h1>About</h1>
+            <p>
+              HackNewHaven is the University of New Haven’s student-led hackathon, designed to bring together 
+              undergraduate and graduate students (or recent grads) for a weekend of intensive creativity, 
+              collaboration, and technical growth. The event is free to attend, beginner-friendly, and features 
+              themed challenges, mentorship, and prizes. 
+              Students have built web apps, AI tools, games, and more within the hackathon framework.
+            </p>
+          </div>
+          <div class="info-card">
+            <h1>Teams</h1>
+            <p>
+              All participants must be at least 18 years old and a student of some university 
+              (or a recent UNH graduate within less than one year). Teams may be 
+              comprised of up to five members. A team may only submit one project, 
+              and no participant may be a member of multiple teams. 
+              All participants must bring a valid form of identification.
+            </p>
+          </div>
+          <div class="info-card">
+            <h1>Guidlines</h1>
+            <p>
+              Projects should be original works created on site. Coming with an idea in mind is perfectly fine, 
+              working on an existing project is not.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="arrow-div">
+          <img class="arrow1" src="imgs/left-arrow.png" alt="">
+          <img class="arrow2" src="imgs/right-arrow.png" alt="">
+        </div>
+      </div>
+
+      <div class="map-div">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.858696870218!2d-72.96142722408679!3d41.29017967131235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d8928e4f9e93%3A0xe08420effc278ab2!2sRailroad%20Salvage!5e0!3m2!1sen!2sus!4v1742501138502!5m2!1sen!2sus" 
+        width="500" height="500" allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h1>Event Venue</h1>
+        <p>Join us at University of New Haven, West Haven, CT 06516</p>
+        <p>Event Parking</p>
+      </div>
+    </div>
+
+    <div class="cloud-div2">
+      <img class="cloud3-img" src="imgs/cloud3.png" alt="">
+    </div>
+  </div>
+
+  <div id="sponsors-title" class="border-div2">
+    <img class="border-div2-img" src="imgs/plane2.png" alt="">
+    <h1>Sponsors</h1>
+    <div class="sponsors-div">
+      <div class="sponsors-track">
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+        <div class="sponsors-card"><img src="imgs/plane-icon3.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-bg3" style="background-image: url('imgs/bg3.png'); background-size: cover; background-position: center;">
+
+    <div class="cloud-div3-1">
+      <img class="cloud5-img" src="imgs/cloud5.png" alt="">
+    </div>
+
+    <div class="gallery-title"><h1>Gallery</h1></div>
+
+    <div class="gallery-div">
+      <div class="gallery-section">
+        <div class="gallery-card"><img src="https://media.licdn.com/dms/image/v2/D4D22AQF71G5-YDVkLQ/feedshare-shrink_2048_1536/B4DZXIiyTJHYAo-/0/1742826355154?e=1762387200&v=beta&t=GMygLvN76F6GL07L9HlUIFwuf6kytt3QILShnZSm-2c" alt=""></div>
+        <div class="gallery-card"><img src="https://media.licdn.com/dms/image/v2/D4D22AQG4xGlqhR5igQ/feedshare-shrink_2048_1536/B4DZXIiyJiH4Ao-/0/1742826330837?e=1762387200&v=beta&t=kC3kwCRn-XiV7mpRaP6kkg6f8PBoRg32F2fVjLAIpVU" alt=""></div>
+        <div class="gallery-card"><img src="https://media.licdn.com/dms/image/v2/D4D22AQGzDgkDvq3Zgg/feedshare-shrink_2048_1536/B4DZXIiyLQHwAw-/0/1742826337580?e=1762387200&v=beta&t=1L1uOGbk9ekThB_aR6XulKhhbRbgjFcVTnWRnb4v1Bk" alt=""></div>
+        <div class="gallery-card"><img src="https://media.licdn.com/dms/image/v2/D4D22AQHvUcgeOXfnCQ/feedshare-shrink_2048_1536/B4DZXIiyQuG8As-/0/1742826348259?e=1762387200&v=beta&t=hnqT2jGZwWyKsGQt0JEqzIsiqTpYP5xH9XG69YBSWr0" alt=""></div>
+        <div class="gallery-card"><img src="https://media.licdn.com/dms/image/v2/D4D22AQH_rgj5AoZB2g/feedshare-shrink_2048_1536/B4DZXIiyMvG8A4-/0/1742826344557?e=1762387200&v=beta&t=98udmPwGYkeyA8liIMHS6aHRsXIGF27vWOO4u4aimNk" alt=""></div>
+        <div class="gallery-card"><img src="https://media.licdn.com/dms/image/v2/D4D22AQHwrxoiPtqdhw/feedshare-shrink_2048_1536/B4DZXIiyQ9GkA0-/0/1742826352436?e=1762387200&v=beta&t=grwpK9wZba1oGVlMjuQxlGiK27qTfjHWCpiHm6cY_rI" alt=""></div>
+        <div class="gallery-card"><img src="https://media.licdn.com/dms/image/v2/D4D22AQEsVnGdarHejw/feedshare-shrink_2048_1536/B4DZXIiyWwGkAo-/0/1742826356674?e=1762387200&v=beta&t=Vtxs9XULVPtzudWVThCzwHr9EgbXz6xriRbnAz1KhZw" alt=""></div>
+        <div class="gallery-card"><img src="https://media.licdn.com/dms/image/v2/D4D22AQG0Jbjq28kKkg/feedshare-shrink_2048_1536/B4DZXIiyYBG4As-/0/1742826356631?e=1762387200&v=beta&t=zUQwKVy0iCAfiCIQ_u_ae4dBGRbG7iPzI94rC2CCppM" alt=""></div>
+        <div class="gallery-card"><img src="https://media.licdn.com/dms/image/v2/D4D22AQFg-OS4TnECHw/feedshare-shrink_2048_1536/B4DZXIiyWRG4Ao-/0/1742826356374?e=1762387200&v=beta&t=BBUzVVhrB3bpshcqnoImLQ2dzxqNoKxrnaq8jHoDiTI" alt=""></div>
+      </div>
+
+      <div class="arrow-div2">
+          <img class="arrow3" src="imgs/left-arrow.png" alt="">
+          <img class="arrow4" src="imgs/right-arrow.png" alt="">
+      </div>
+    </div>
+
+    <div class="cloud-div3-2">
+      <img class="cloud6-img" id="schedule" src="imgs/cloud6.png" alt="">
+    </div>
+
+    <div class="schedule-div">
+      <div class="schedule-section">
+        <h1>Schedule</h1>
+        <div class="schedule-track">
+          <p>Revealing Soon!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-div3">
+    <img class="border-div3-img" src="imgs/plane1.png" alt="">
+    <div class="skills-div">
+      <div class="skill">
+        <img src="imgs/learn.png" alt="">
+        <h1>Learn</h1>
+        <p>Expand your skills with real-world challenges.</p>
+      </div>
+
+      <div class="skill">
+        <img src="imgs/build.png" alt="">
+        <h1>Build</h1>
+        <p>Dare to dream, code to innovate with us!</p>
+      </div>
+
+      <div class="skill">
+        <img src="imgs/share.png" alt="">
+        <h1>Share</h1>
+        <p>Connect with like-minded individuals.</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="navbar-bg4" style="background-image: url('imgs/bg4.png'); background-size: cover; background-position: center;">
+    <div class="faq-section">
+      <div class="faq-div">
+        <h1>FAQ</h1>
+
+        <div class="faq-track">
+
+          <div class="faq">
+            <div class="faq-header">
+              <span>What is a hackathon?</span><span class="icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>A hackathon is an invention marathon. Students come together to build cool software & hardware hacks over 24-48 hours. It’s very beginner friendly.</p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <div class="faq-header">
+              <span>What are the opportunities I can unlock from this event?</span><span class="icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>This event offers a chance to grow and connect. Collaborate with fellow innovators and mentors, compete for prizes that reward creativity and problem-solving, and build lasting connections. Whether you’re here to learn, win, or meet like-minded people, this hackathon will leave you inspired and ready for future success.</p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <div class="faq-header">
+              <span>How much does it cost?</span><span class="icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>Nothing. Attending a hackathon is free.</p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <div class="faq-header">
+              <span>Do I need to be a student to attend?</span><span class="icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>Yes. Only students who are currently enrolled at a college/university or have graduated within the past 12 months are eligible to attend. <span style="color: red; font-weight: bold;">Additionally, participants must be 18 years or older to attend the hackathon.</span></p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <div class="faq-header">
+              <span>Where is the event?</span><span class="icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>The event is being hosted at the University of New Haven, West Haven, CT.</p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <div class="faq-header">
+              <span>What is Major League Hacking?</span><span class="icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p><a href="https://mlh.io/" target="_blank">Major League Hacking</a> is the official student hackathon league in North America & Europe. We work with over 200 Member Events and empower over 70,000 students every year.</p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <div class="faq-header">
+              <span>Is there a code of conduct?</span><span class="icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>Yes there is. We enforce it very strongly. You can <a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md" target="_blank">find it here.</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p style="text-align: center;">Follow us on Social Media</p>
+    <div class="social-media">
+      <a href="https://www.instagram.com/hacknewhaven/" target="_blank"><img src="imgs/insta-icon.png" alt=""></a>
+      <a href="https://www.linkedin.com/in/hack-new-haven-5320b9322/" target="_blank"><img src="imgs/linkedin-icon.png" alt=""></a>
+      <a href="mailto:hacknewhaven@gmail.com"><img src="imgs/mail-icon.png" alt=""></a>
+    </div>
+  </footer>
+
+  
+
+  <script src="js/countdown.js"></script>
+  <script src="js/progressbar.js"></script>
+  <script src="js/arrow-click.js"></script>
+  <script src="js/image-full.js"></script>
+  
+
+</body>
+</html>
