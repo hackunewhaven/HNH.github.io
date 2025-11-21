@@ -61,9 +61,8 @@
   align-items: center;
 }
 .title {
-  font-family: "Press Start 2P";
+  font-family: "Jersey 25";
   font-weight: 400;
-  font-style: normal;
   color: rgb(243, 247, 192);
   justify-content: center;
   text-align: center;
@@ -71,7 +70,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  padding: 0;
   border: 2px none red;
 }
 .title img {
@@ -84,18 +82,19 @@
   transform: scale(1.1);
 }
 .title-div h1{
+  font-family: "Press Start 2P";
   font-size: 50px;
   margin-top: 20px;
   filter: drop-shadow(-3px 3px 0px rgb(0, 0, 0));
 }
 .title-div h2{
-  font-size: 25px;
+  font-size: 40px;
   margin-top: 20px;
 }
 .title-div h3{
-  font-size: 15px;
+  font-size: 30px;
   margin-top: 0;
-  line-height: 20px;
+  line-height: 30px;
 }
 @media (max-width: 700px) {
   .title-div h1{
@@ -179,6 +178,14 @@
   text-transform: uppercase;
   color: rgb(243, 247, 192);
 }
+@media (max-width: 400px) {
+  .countdown {
+    gap: 20px;
+  }
+  #days, #hours, #minutes, #seconds {
+    font-size: 30px;
+  }
+}
 
 
 .cloud-div {
@@ -233,11 +240,6 @@
   flex-direction: column;
   z-index: 15;
 }
-@media (max-width: 750px) {
-  .border-div p {
-    font-size: 16px;
-  }
-}
 .border-div p {
   color: rgb(243, 247, 192);
   font-size: 20px;
@@ -245,6 +247,11 @@
   max-width: 800px;
   line-height: 30px;
   font-weight: 700;
+}
+@media (max-width: 750px) {
+  .border-div p {
+    font-size: 16px;
+  }
 }
 .border-div img {
   height: 50px;
@@ -293,7 +300,7 @@
   margin-top: 50px;
 }
 .section-title h1{
-  font-size: 50px;
+  font-size: 40px;
   margin: 0;
   filter: drop-shadow(-2px 2px 0px rgb(0, 0, 0));
 }
@@ -330,12 +337,6 @@
 .arrow-div img:hover {
   scale: 1.2;
 }
-.arrow1 {
-  rotate: -10deg;
-}
-.arrow2 {
-  rotate: 10deg;
-}
 
 
 
@@ -368,10 +369,11 @@
     display: none;
   }
 }
+
 .info-card-div {
   border: 2px none blue;
   padding: 20px;
-  width: 500px;
+  max-width: 500px;
   overflow-x: hidden;
   display: flex;
   justify-content: start;
@@ -387,6 +389,12 @@
   text-align: center;
   border-radius: 5px;
   color: rgb(243, 247, 192);
+}
+@media (max-width: 400px) {
+  .info-card {
+    text-align: left;
+    min-width: none;
+  }
 }
 @keyframes float2 {
   0%, 100% {
@@ -515,6 +523,10 @@
   gap: 50px;
   animation: scroll-left 20s linear infinite; /* adjust speed */
 }
+.sponsors-track:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
@@ -549,17 +561,16 @@
   background-position: center;
 }
 .gallery-title {
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   display: flex;
-  max-width: 80%;
   margin-top: 100px;
   border: 2px none yellow;
 }
 .gallery-title h1 {
   font-family: "Press Start 2P";
   letter-spacing: 2px;
-  font-size: 50px;
+  font-size: 40px;
   margin: 0;
   color: rgb(243, 247, 192);
   filter: drop-shadow(-3px 3px 0px rgb(0, 0, 0));
@@ -591,12 +602,14 @@
   left: 200px;
   top: 100px;
   position: absolute;
+  pointer-events: none;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.164));
   animation: float2 6s ease-in-out infinite;
 }
 .cloud6-img {
   width: 300px;
   position: absolute;
+  pointer-events: none;
   bottom: 100px;
   left: 700px;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.158));
@@ -641,9 +654,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   margin-bottom: 100px;
-  margin-left: 300px;
 }
 @media (max-width: 1300px) {
   .gallery-div {
@@ -668,10 +680,9 @@
   gap: 50px;
   display: flex;
   flex-direction: row;
-  overflow: hidden;
+  overflow: auto;
   justify-content: start;
   align-items: center;
-  scroll-snap-type: x mandatory;
 }
 @media (max-width: 700px) {
   .gallery-section {
@@ -681,11 +692,11 @@
 .gallery-card {
   border: 2px none blue;
   scroll-snap-align: start;
+  margin-left: 10px;
 }
 .gallery-card img {
   max-width: 400px;
   border-radius: 10px;
-  margin-left: 10px;
   border: 2px solid rgb(243, 247, 192);
   filter: drop-shadow(-3px 3px 0px rgb(0, 0, 0));
   transition: .2s;
@@ -717,41 +728,6 @@
     max-width: 350px;
   }
 } 
-.arrow-div2 {
-  border: 2px none red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  transform: translate(-100px, 50px);
-  rotate: 45deg;
-}
-@media (max-width: 1300px) {
-  .arrow-div2 {
-    transform: translate(0px, 50px);
-  }
-}
-@media (max-width: 700px) {
-  .arrow-div2 {
-    rotate: 0deg;
-    transform: translate(100px, 0px);
-  }
-}
-.arrow-div2 img {
-  width: 50px;
-  cursor: pointer;
-  filter: drop-shadow(-3px 3px 0px rgb(0, 0, 0));
-  transition: .2s;
-}
-.arrow-div2 img:hover {
-  scale: 1.2;
-}
-.arrow3 {
-  rotate: -10deg;
-}
-.arrow4 {
-  rotate: 10deg;
-}
 
 
 
@@ -760,8 +736,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
 }
 .schedule-section {
   border: 2px none green;
@@ -770,7 +745,7 @@
 }
 .schedule-section h1 {
   font-family: "Press Start 2P";
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 50px;
   color: rgb(243, 247, 192);
   filter: drop-shadow(-2px 2px 0px rgb(0, 0, 0));
@@ -870,77 +845,76 @@
   background-position: center;
 }
 .faq-section {
-  border: 2px none red;
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  flex-direction: column;
   color: rgb(243, 247, 192);
-  padding: 50px;
-  margin-bottom: 250px;
-}
-.faq-div {
-  border: 2px none blue;
-  padding: 20px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 400px;
   justify-content: center;
-  align-items: center;
 }
-.faq-div h1 {
+
+.faq-section h1 {
   font-family: "Press Start 2P";
-  font-size: 50px;
-  margin-right: 100px;
+  font-size: 40px;
+  padding: 50px;
   color: rgb(243, 247, 192);
   filter: drop-shadow(-3px 3px 0px rgb(0, 0, 0));
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
-.faq-track {
-  border: 2px none yellow;
-  max-width: 700px;
+
+.faq-row {
   display: flex;
-  gap: 0;
-  margin: 0;
-  flex-direction: column;
+  gap: 20px;
+  overflow-x: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border: 2px none red;
+  scroll-snap-type: x mandatory;
 }
-.faq {
+.faq-row::-webkit-scrollbar {
+  height: 5px;
+}
+.faq-row::-webkit-scrollbar-thumb {
+  background: rgba(243, 247, 192, 0);
+  border-radius: 10px;
+}
+
+.faq-card {
+  width: 350px;
+  margin-left: 20px;
   background-color: #556a9c;
-  border-top: 2px solid rgba(65, 65, 65, 0.305);
-  border-radius: 0px;
   padding: 20px;
-  margin: 0;
-  filter: drop-shadow(-3px 3px 0px rgb(0, 0, 0));
+  border: 2px solid rgb(243, 247, 192);
+  border-radius: 10px;
+  filter: drop-shadow(-3px 3px 0 rgb(0,0,0));
+  flex-shrink: 0;
+  transition: .2s;
 }
-.faq-header {
-  font-size: 16px;
-  color: rgb(243, 247, 192);
+.faq-card:hover {
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  transform: translateY(-5px);
+  transform: rotate(2deg);
 }
-.faq a {
-  text-decoration: underline;
+@media (max-width: 430px) {
+  .faq-card {
+    width: 300px;
+  }
+}
+
+.faq-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
   color: rgb(243, 247, 192);
 }
-.faq-header .icon {
-  transition: transform 0.3s;
-  filter: grayscale(100%);
-}
-.faq-content {
+
+.faq-card p {
   font-size: 15px;
   color: rgb(243, 247, 192);
-  max-height: 0;
-  margin: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
 }
-.faq.active .faq-content {
-  max-height: 500px; /* adjust based on content */
+
+.faq-card a {
+  color: rgb(243, 247, 192);
+  text-decoration: underline;
 }
-.faq.active .icon {
-  transform: rotate(45deg);
-}
+
 
 
 
@@ -1082,4 +1056,22 @@ border-radius: 3px;
 /* Handle on hover */
 .navbar::-webkit-scrollbar-thumb:hover {
 background: rgb(41, 67, 102);
+}
+
+
+.gallery-section::-webkit-scrollbar {
+  height: 5px;
+}
+  /* Track */
+.gallery-section::-webkit-scrollbar-track {
+  background: #00000000;
+}
+/* Handle */
+.gallery-section::-webkit-scrollbar-thumb {
+  background: rgb(243, 247, 192);
+}
+/* Handle on hover */
+.gallery-section::-webkit-scrollbar-thumb:hover {
+  background: rgb(41, 67, 102);
+  cursor: pointer;
 }
