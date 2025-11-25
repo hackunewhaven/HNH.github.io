@@ -60,12 +60,19 @@
   </div>
 
   <div class="navbar-bg" style="background-image: url('imgs/bg1.png');">
-    <div class="navbar">
-      <a href="#info-title"><button>About</button></a>
-      <a href="#sponsors-title"><button>Sponsors</button></a>
-      <a href="#schedule"><button>Schedule</button></a>
-      <a href="#faq"><button>FAQ</button></a>
-      <button>Register</button>
+    <div class="navbar-container">
+      <div class="hamburger" onclick="toggleMenu()">
+        &#9776;
+      </div>
+
+      <div class="navbar" id="navbar">
+        <a href="#info-title"><button>About</button></a>
+        <a href="#sponsors-title"><button>Sponsors</button></a>
+        <a href="#schedule"><button>Schedule</button></a>
+        <a href="#faq"><button>FAQ</button></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeK7GpxCp7y-Jbpm34nn1KAxgHbbk_qZkJqqOV5jafY8O6R0g/viewform?usp=publish-editor"
+          target="_blank"><button>Register</button></a>
+      </div>
     </div>
 
     <div class="title-div">
@@ -226,6 +233,7 @@
       <img class="cloud6-img" id="schedule" src="imgs/cloud6.png" alt="">
     </div>
 
+    <!--
     <div class="schedule-div">
       <div class="schedule-section">
         <h1>Schedule</h1>
@@ -234,6 +242,7 @@
         </div>
       </div>
     </div>
+    -->
 
   </div>
 
@@ -323,6 +332,14 @@
   <script src="js/progressbar.js"></script>
   <script src="js/arrow-click.js"></script>
   <script src="js/image-full.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("open");
+    }
+  </script>
+  
+
+
   
 
 </body>

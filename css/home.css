@@ -2,7 +2,6 @@
 
 .mlh-trust-badge {
   position: fixed;
-  display: none;
   top: 0;
   right: 100px;
   width: 100px;
@@ -14,6 +13,12 @@
   transform: translateY(0px);
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .mlh-trust-badge {
+    right: 10px;
+  }
+  
+}
 
 
 .navbar-bg {
@@ -21,22 +26,28 @@
   background-size: cover; 
   background-position: center;
 }
+/* Default desktop navbar */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px none blue;
   gap: 20px;
   padding: 20px;
   margin-top: 20px;
 }
-@media (max-width: 700px) {
-  .navbar {
-    overflow-x: auto;
-    justify-content: start;
-  }
 
+/* Hamburger icon hidden by default */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  background: #00238e;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
+
+/* Buttons stay the same */
 .navbar button {
   border: 2px solid white;
   background-color: #00238e;
@@ -47,10 +58,41 @@
   font-weight: bold;
   transition: .2s;
 }
+
 .navbar button:hover {
   transform: translateY(5px);
   cursor: pointer;
 }
+
+/* --- BREAKPOINT --- */
+@media (max-width: 750px) {
+
+  /* show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* menu becomes vertical and hidden by default */
+  .navbar {
+    display: none; /* hidden until toggled */
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    align-items: flex-start;
+    background-color: #00238e;
+  }
+  .navbar button {
+    width: 100px;
+    border: none;
+    box-shadow: 2px 2px 0px black;
+  }
+
+  /* when menu is open */
+  .navbar.open {
+    display: flex;
+  }
+}
+
 
 
 
@@ -85,6 +127,7 @@
   font-family: "Press Start 2P";
   font-size: 50px;
   margin-top: 20px;
+  padding: 20px;
   filter: drop-shadow(-3px 3px 0px rgb(0, 0, 0));
 }
 .title-div h2{
@@ -683,6 +726,7 @@
   overflow: auto;
   justify-content: start;
   align-items: center;
+  animation: scrollGallery 20s linear infinite;
 }
 @media (max-width: 700px) {
   .gallery-section {
@@ -846,7 +890,6 @@
 }
 .faq-section {
   color: rgb(243, 247, 192);
-  margin-bottom: 400px;
   justify-content: center;
 }
 
@@ -856,15 +899,15 @@
   padding: 50px;
   color: rgb(243, 247, 192);
   filter: drop-shadow(-3px 3px 0px rgb(0, 0, 0));
-  margin-bottom: 40px;
   margin-top: 40px;
 }
 
 .faq-row {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-top: 40px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
   padding-bottom: 40px;
   border: 2px none red;
   scroll-snap-type: x mandatory;
@@ -878,7 +921,7 @@
 }
 
 .faq-card {
-  width: 350px;
+  height: 200px;
   margin-left: 20px;
   background-color: #556a9c;
   padding: 20px;
@@ -893,6 +936,25 @@
   transform: translateY(-5px);
   transform: rotate(2deg);
 }
+@media (max-width: 1180px) {
+  .faq-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .faq-card {
+    height: 170px;
+  }
+}
+@media (max-width: 960px) {
+  .faq-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .faq-row {
+    grid-template-columns: 1fr;
+  }
+
+}
 @media (max-width: 430px) {
   .faq-card {
     width: 300px;
@@ -900,13 +962,13 @@
 }
 
 .faq-card h2 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 10px;
   color: rgb(243, 247, 192);
 }
 
 .faq-card p {
-  font-size: 15px;
+  font-size: 13px;
   color: rgb(243, 247, 192);
 }
 
@@ -1060,7 +1122,7 @@ background: rgb(41, 67, 102);
 
 
 .gallery-section::-webkit-scrollbar {
-  height: 5px;
+  height: 10px;
 }
   /* Track */
 .gallery-section::-webkit-scrollbar-track {
@@ -1068,7 +1130,7 @@ background: rgb(41, 67, 102);
 }
 /* Handle */
 .gallery-section::-webkit-scrollbar-thumb {
-  background: rgb(243, 247, 192);
+  background: rgb(41, 67, 102);
 }
 /* Handle on hover */
 .gallery-section::-webkit-scrollbar-thumb:hover {
