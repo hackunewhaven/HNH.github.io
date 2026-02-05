@@ -583,7 +583,6 @@
   flex-direction: column;
   border-radius: 5px;
   border: 2px none rgb(243, 247, 192);
-  animation: float2 6s ease-in-out infinite;
 }
 .sponsors-card img {
   width: 500px;
