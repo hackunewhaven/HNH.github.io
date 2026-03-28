@@ -98,7 +98,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  margin-top: 20px;
 }
 .discord-invite a {
   color: #00238e;
