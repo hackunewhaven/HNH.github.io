@@ -94,7 +94,19 @@
 }
 
 
-
+.discord-invite {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.discord-invite a {
+  color: #00238e;
+  font-weight: bold;
+  background-color: rgb(243, 247, 192);
+  padding: 20px;
+  border-radius: 5px;
+}
 
 .title-div {
   border: 2px none green;
